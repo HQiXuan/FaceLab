@@ -1,0 +1,2 @@
+androidproject是服务器端代码，请用idea导入
+FaceLab是客服端代码，请用AndroidStudio导入

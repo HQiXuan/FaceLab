@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+    ext {
+        compileSdkVersion = 29
+        minSdkVersion = 19
+        targetSdkVersion = 29
+        materialDesignVersion = '1.0.0'
+        junitVersion = '4.12'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

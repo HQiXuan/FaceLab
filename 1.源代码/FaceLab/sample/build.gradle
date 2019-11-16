@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion project.ext.compileSdkVersion
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    defaultConfig {
+        applicationId "com.andremion.floatingnavigationview.sample"
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false" //不显示log
+            zipAlignEnabled true     //Zipalign优化
+            shrinkResources true    // 移除无用的resource文件
+            minifyEnabled true     //混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':library')
+    implementation "com.google.android.material:material:$materialDesignVersion"
+    implementation 'com.squareup.okhttp3:okhttp:4.2.1'
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    // https://mvnrepository.com/artifact/com.baidu.aip/java-sdk
+    //implementation 'com.android.support:appcompat-v7:29.+'
+
+    compile group: 'com.baidu.aip', name: 'java-sdk', version: '4.11.3'
+    // https://mvnrepository.com/artifact/com.loopj.android/android-async-http
+    compile group: 'com.loopj.android', name: 'android-async-http', version: '1.4.9'
+
+//    androidTestCompile 'com.android.support:support-annotations:19.1.0'
+//    androidTestCompile 'com.android.support.test:runner:0.4.1'
+//    androidTestCompile 'com.android.support.test:rules:0.4.1'
+
+
+}

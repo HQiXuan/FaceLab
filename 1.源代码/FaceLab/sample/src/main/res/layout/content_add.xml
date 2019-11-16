@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AddPersonActivity"
+    tools:showIn="@layout/activity_add_person">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/photo_add"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_wihte_frame" >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:lines="1"
+            android:padding="1dp"
+            android:text="姓名 "
+            android:textSize="13sp" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@+id/tv_name"
+            android:background="#EEEFFF" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/view1"
+            android:ems="19"
+            android:hint="请输入姓名"
+            android:inputType="text"
+            android:padding="1dp"
+            android:background="@null"
+            android:drawableBottom="@drawable/line"
+            android:textSize="12sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageView
+            android:id="@+id/del_userid"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+            android:visibility="invisible" />
+            <requestFocus />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_wihte_frame" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:lines="1"
+        android:padding="1dp"
+        android:text="用户ID "
+        android:textSize="13sp" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="1dip"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:background="#EEEFFF" />
+
+    <EditText
+        android:id="@+id/et_userid"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/view2"
+        android:background="@null"
+        android:drawableBottom="@drawable/line"
+        android:ems="19"
+        android:hint="请输入姓名拼音"
+        android:inputType="text"
+        android:padding="1dp"
+        android:textSize="12sp" >
+
+    </EditText>
+
+    <ImageView
+        android:id="@+id/del_user"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="3dp"
+        android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_wihte_frame">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性别  " />
+            <View
+                android:id="@+id/view3"
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@+id/textView3"
+                android:background="#EEEFFF" />
+            <RadioGroup
+                android:id="@+id/rgSex"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+            <RadioButton
+                android:id="@+id/cb_male"
+                style="@style/select_style"
+                android:layout_height="30dp"
+                android:tag="male"
+                android:text="男" />
+
+            <RadioButton
+                android:id="@+id/cb_famale"
+                style="@style/select_style"
+                android:tag="famale"
+                android:layout_height="30dp"
+                android:text="女" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_addsearch"
+        style="@style/select_style"
+        android:layout_below="@+id/ll_radio"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="64dp"
+        android:textSize="16dp"
+        android:text="人脸添加"/>
+    <Button
+        android:id="@+id/btn_photo"
+        style="@style/select_style"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/btn_addsearch"
+        android:layout_width="match_parent"
+        android:textSize="16dp"
+        android:layout_height="64dp"
+        android:text="打开相册"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
